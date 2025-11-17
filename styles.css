@@ -1,0 +1,42 @@
+/* ベーシックなリセット */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { height: 100%; font-family: system-ui,-apple-system,"Segoe UI","Yu Gothic", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Arial", sans-serif; color:#222; }
+
+/* レイアウト */
+.container { width: 90%; max-width: 1100px; margin: 0 auto; padding: 2rem 0; }
+
+.site-header { background: #0a74da; color: #fff; position: sticky; top: 0; z-index: 10; }
+.header-inner { display:flex; align-items:center; justify-content:space-between; gap: 1rem; padding: 0.8rem 0; }
+.site-title a { color: white; text-decoration: none; font-size: 1.1rem; font-weight:700; }
+
+/* ナビ */
+.main-nav ul { list-style: none; display:flex; gap: 1rem; }
+.main-nav a { color:#fff; text-decoration:none; padding:0.4rem; }
+.nav-toggle { display:none; background:transparent; border:1px solid rgba(255,255,255,0.2); color:#fff; padding:0.35rem 0.6rem; border-radius:4px; }
+
+/* ヒーロー */
+.hero { background: linear-gradient(135deg,#0a74da 0%, #6ec1ff 100%); color:#fff; padding:4rem 0; text-align:center; }
+.hero-inner { max-width:900px; margin:0 auto; }
+.hero h2 { font-size:2rem; margin-bottom:0.6rem; }
+.btn { display:inline-block; margin-top:1rem; background:#fff; color:#0a74da; padding:0.6rem 1rem; text-decoration:none; border-radius:6px; }
+
+/* セクション */
+.section { padding:3rem 0; background: #fff; }
+.grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap:1.25rem; align-items:start; }
+.card { background:#fafafa; border:1px solid #eee; border-radius:8px; overflow:hidden; padding:0.8rem; }
+.card img { width:100%; height:auto; display:block; }
+
+/* フォーム */
+form label { display:block; margin:0.6rem 0; font-size:0.95rem; }
+input[type="text"], input[type="email"], textarea { width:100%; padding:0.6rem; border:1px solid #ddd; border-radius:6px; }
+
+/* フッター */
+.site-footer { background:#f4f4f4; padding:1rem 0; text-align:center; font-size:0.9rem; color:#555; }
+
+/* レスポンシブ */
+@media (max-width: 800px) {
+  .main-nav { display:none; }
+  .nav-toggle { display:inline-block; }
+  .site-title { font-size:1rem; }
+  .hero h2 { font-size:1.5rem; }
+}
